@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="report3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="maxid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="report3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="report3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="report2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="maxid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="report2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="report2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="report">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pwd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="maxid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="report3SoapIn">
+    <wsdl:part name="parameters" element="tns:report3" />
+  </wsdl:message>
+  <wsdl:message name="report3SoapOut">
+    <wsdl:part name="parameters" element="tns:report3Response" />
+  </wsdl:message>
+  <wsdl:message name="report2SoapIn">
+    <wsdl:part name="parameters" element="tns:report2" />
+  </wsdl:message>
+  <wsdl:message name="report2SoapOut">
+    <wsdl:part name="parameters" element="tns:report2Response" />
+  </wsdl:message>
+  <wsdl:message name="reportSoapIn">
+    <wsdl:part name="parameters" element="tns:report" />
+  </wsdl:message>
+  <wsdl:message name="reportSoapOut">
+    <wsdl:part name="parameters" element="tns:reportResponse" />
+  </wsdl:message>
+  <wsdl:message name="report3HttpGetIn">
+    <wsdl:part name="sn" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="maxid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="report3HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="report2HttpGetIn">
+    <wsdl:part name="sn" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="maxid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="report2HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="reportHttpGetIn">
+    <wsdl:part name="sn" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="maxid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="reportHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="report3HttpPostIn">
+    <wsdl:part name="sn" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="maxid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="report3HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="report2HttpPostIn">
+    <wsdl:part name="sn" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="maxid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="report2HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="reportHttpPostIn">
+    <wsdl:part name="sn" type="s:string" />
+    <wsdl:part name="pwd" type="s:string" />
+    <wsdl:part name="maxid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="reportHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ReportServiceSoap">
+    <wsdl:operation name="report3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">发送短信：sn软件序列号;pwd加密密码md5(sn+password);maxid</wsdl:documentation>
+      <wsdl:input message="tns:report3SoapIn" />
+      <wsdl:output message="tns:report3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="report2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">发送短信：sn软件序列号;pwd加密密码md5(sn+password);maxid</wsdl:documentation>
+      <wsdl:input message="tns:report2SoapIn" />
+      <wsdl:output message="tns:report2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="report">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">发送短信：sn软件序列号;pwd加密密码md5(sn+password);maxid</wsdl:documentation>
+      <wsdl:input message="tns:reportSoapIn" />
+      <wsdl:output message="tns:reportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ReportServiceHttpGet">
+    <wsdl:operation name="report3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">发送短信：sn软件序列号;pwd加密密码md5(sn+password);maxid</wsdl:documentation>
+      <wsdl:input message="tns:report3HttpGetIn" />
+      <wsdl:output message="tns:report3HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="report2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">发送短信：sn软件序列号;pwd加密密码md5(sn+password);maxid</wsdl:documentation>
+      <wsdl:input message="tns:report2HttpGetIn" />
+      <wsdl:output message="tns:report2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="report">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">发送短信：sn软件序列号;pwd加密密码md5(sn+password);maxid</wsdl:documentation>
+      <wsdl:input message="tns:reportHttpGetIn" />
+      <wsdl:output message="tns:reportHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ReportServiceHttpPost">
+    <wsdl:operation name="report3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">发送短信：sn软件序列号;pwd加密密码md5(sn+password);maxid</wsdl:documentation>
+      <wsdl:input message="tns:report3HttpPostIn" />
+      <wsdl:output message="tns:report3HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="report2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">发送短信：sn软件序列号;pwd加密密码md5(sn+password);maxid</wsdl:documentation>
+      <wsdl:input message="tns:report2HttpPostIn" />
+      <wsdl:output message="tns:report2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="report">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">发送短信：sn软件序列号;pwd加密密码md5(sn+password);maxid</wsdl:documentation>
+      <wsdl:input message="tns:reportHttpPostIn" />
+      <wsdl:output message="tns:reportHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReportServiceSoap" type="tns:ReportServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="report3">
+      <soap:operation soapAction="http://tempuri.org/report3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="report2">
+      <soap:operation soapAction="http://tempuri.org/report2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="report">
+      <soap:operation soapAction="http://tempuri.org/report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ReportServiceSoap12" type="tns:ReportServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="report3">
+      <soap12:operation soapAction="http://tempuri.org/report3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="report2">
+      <soap12:operation soapAction="http://tempuri.org/report2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="report">
+      <soap12:operation soapAction="http://tempuri.org/report" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ReportServiceHttpGet" type="tns:ReportServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="report3">
+      <http:operation location="/report3" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="report2">
+      <http:operation location="/report2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="report">
+      <http:operation location="/report" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ReportServiceHttpPost" type="tns:ReportServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="report3">
+      <http:operation location="/report3" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="report2">
+      <http:operation location="/report2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="report">
+      <http:operation location="/report" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReportService">
+    <wsdl:port name="ReportServiceSoap" binding="tns:ReportServiceSoap">
+      <soap:address location="http://report.entinfo.cn:8060/reportservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ReportServiceSoap12" binding="tns:ReportServiceSoap12">
+      <soap12:address location="http://report.entinfo.cn:8060/reportservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ReportServiceHttpGet" binding="tns:ReportServiceHttpGet">
+      <http:address location="http://report.entinfo.cn:8060/reportservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ReportServiceHttpPost" binding="tns:ReportServiceHttpPost">
+      <http:address location="http://report.entinfo.cn:8060/reportservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

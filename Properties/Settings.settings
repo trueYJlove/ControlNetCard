@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Engine.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Engine_cn_entinfo_report_ReportService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://report.entinfo.cn:8060/reportservice.asmx</Value>
+    </Setting>
+    <Setting Name="Engine_cn_entinfo_sdk2_WebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sdk2.entinfo.cn:8060/webservice.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
